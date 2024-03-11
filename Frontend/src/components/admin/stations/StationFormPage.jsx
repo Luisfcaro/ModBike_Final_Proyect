@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './StationFormPage.css';
 
-const StationFormPage = ({ station = { id: '', station_name: '', num_slots: '' , location: ''}, form_type, sendData }) => {
+const StationFormPage = ({ station = { id: '', station_name: '', num_slots: '' , location: '', lat: '', lon: ''}, form_type, sendData }) => {
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -10,6 +10,8 @@ const StationFormPage = ({ station = { id: '', station_name: '', num_slots: '' ,
         station_name: '',
         location: '',
         num_slots: '',
+        lat: '',
+        lon: '',
     });
 
     useEffect(() => {
@@ -20,6 +22,8 @@ const StationFormPage = ({ station = { id: '', station_name: '', num_slots: '' ,
                 station_name: station.station_name || '',
                 location: station.location || '',
                 num_slots: station.num_slots || '',
+                lat: station.lat || '',
+                lon: station.lon || '',
             });
         }
     }, [station]);
@@ -62,6 +66,14 @@ const StationFormPage = ({ station = { id: '', station_name: '', num_slots: '' ,
                             <input name="num_slots" id="num_slots" value={formData.num_slots} type="number" onChange={handleInputChange} />
                         </div>
                     )}
+                    <div className="form-group">
+                        <label htmlFor="lat">Latitud</label>
+                        <input required="" name="lat" id="lat" value={formData.lat} type="text" onChange={handleInputChange} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="lon">Longitud</label>
+                        <input required="" name="lon" id="lon" value={formData.lon} type="text" onChange={handleInputChange} />
+                    </div>
                     <button type="submit" className="form-submit-btn">{type_button}</button>
                 </form>
             </div>

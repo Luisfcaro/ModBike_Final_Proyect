@@ -7,6 +7,8 @@ class Station(models.Model):
     station_status = models.CharField(max_length=100, null=False, default='Operativa')
     image = models.CharField(max_length=100, null=True, default='https://picsum.photos/id/69')
     location = models.CharField(max_length=100)
+    lat = models.FloatField(null=True)
+    lon = models.FloatField(null=True)
 
 
     def __str__(self):

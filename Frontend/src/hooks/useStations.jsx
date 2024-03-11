@@ -43,8 +43,9 @@ export function useStations() {
                 station_name: data.station_name,
                 station_desc: data.station_desc,
                 location: data.location,
-                id_zone: data.id_zone,
-                num_slots: data.num_slots
+                num_slots: data.num_slots,
+                lat: data.lat,
+                lon: data.lon
             }
 
             StationService.createStation(data_station)
@@ -69,7 +70,8 @@ export function useStations() {
                 station_name: data.station_name,
                 station_desc: data.station_desc,
                 location: data.location,
-                id_zone: data.id_zone
+                lat: data.lat,
+                lon: data.lon
             }
 
             // console.log(data_station);
