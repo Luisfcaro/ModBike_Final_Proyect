@@ -6,9 +6,9 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-
 
 export default function Footerr() {
   return (
-    <Footer container className="mt-20">
+    <Footer container className=" fixed bottom-0 left-0 z-20 mt-10">
       <div className="w-full">
-        <div className="w-full sm:flex sm:items-center sm:justify-between">
+        <div className="w-full sm:flex sm:items-center sm:justify-between h-100 mb-auto">
           <Footer.Copyright href="#" by="Luis Fernández Caro™" year={2024} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
             <Footer.Icon href="#" icon={BsFacebook} />
