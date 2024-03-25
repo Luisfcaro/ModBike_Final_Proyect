@@ -26,7 +26,7 @@ const Map = ({stations}) => {
         {stations.map((station) => (
             <Marker key={station.id} position={[station.lat, station.lon]}>
                 <Popup>
-                <h2><b>{station.name}</b></h2>
+                <h2><b>{station.station_name}</b></h2>
                 <p>Slots Disponibles: <b>{station.bikes_aviable}</b></p>
                 <Button onClick={() => navigate(`/station/${station.id}`)}><b>Ver Más</b></Button>
                 </Popup>

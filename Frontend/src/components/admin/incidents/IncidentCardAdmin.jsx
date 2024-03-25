@@ -2,7 +2,7 @@ import React from "react";
 import "./IncidentCardAdmin.css";
 import { useNavigate } from "react-router-dom";
 
-const IncidentsCardAdmin = ({ incident, delete_incident }) => {
+const IncidentsCardAdmin = ({ incident }) => {
     const navigate = useNavigate();
 
     const redirects = {
