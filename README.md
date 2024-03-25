@@ -32,18 +32,6 @@ Instale las dependencias necesarias para el frontend:
 cd ./Frontend && npm install
 ```
 
-## 🖥 Ejecución
-Nota: El proyecto se encuentra en una fase beta, lo que podría limitar algunas funcionalidades.
-
-Para iniciar la aplicación:
-
-Ejecute Docker Compose (Esto debe realizarse en la carpeta Raíz del proyecto): 
-```
-docker-compose up --build
-```
-
-Acceda a la interfaz principal a través de localhost:8080 y explore las diferentes secciones de la página web. Le recomendamos que intente crear una bici
-
 ## 💡 ¿Cómo Contribuir?
 Tus ideas y sugerencias son valiosas para nosotros. Si tienes propuestas de mejora o encuentras algún problema, no dudes en abrir un issue o enviar un pull request.
 
